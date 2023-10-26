@@ -3,12 +3,14 @@
   <head>
  
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">
+    
    <title>Shop</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">
+   
   </head>
   
-  <body style="background-color: #F9F5F6;">
+  <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="#"><img src="logo.png" width="80px" height="80px"></a></a></font>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -34,6 +36,10 @@
 
 
               <style>
+                .body {
+                  background-color: #F9F5F6;
+                  background-attachment: fixed;
+                }
     
                 .modal-overlay {
                     display: none;
@@ -59,6 +65,37 @@
                     border: 1px solid #268b77;
                     border-radius: 10px;
                 }
+
+                .card { 
+                Height: 100%;
+                }
+                .card-img-top {
+                Object-fit: cover;
+                Height: 200px;
+                }
+                .card-body {
+                height: auto;
+                Display: flex;
+                Flex-direction: column;
+                Justify-content: space-between;
+                }
+                .Card-body .btn-container {
+                Display: flex;
+                Justify-content: space-between;
+                Align-items: center;
+                }
+                .card-title, .card-text {
+                height: auto;
+                }
+                .card-text {
+                Font-size: 14px;
+                }
+                @media (max-width: 768px) {
+                   nav, .card, .modal-content {
+                      padding: 10px;
+                  }
+                }
+
             </style>
             <center>
         
@@ -74,7 +111,7 @@
                     <label for="password">Password:</label>
                     <input type="password" id="password" name="password" required><br><br>
 
-                    <a class="login-link TextStyle2" href="#">Don't have an account? Sign up here.</a><br>
+                    <a class="login-link TextStyle2" href="register.html">Don't have an account? Sign up here.</a><br>
                     <input type="submit" style="background-color:#98edd7"  value="Login">
                     <button onclick="closeLoginModal()"  style="background-color:#98edd7" >Close</button>
                 </form><br>
@@ -103,7 +140,7 @@
         <img class="card-img-top" src="1.png" alt="Card image cap">
         <div class="card-body">
           <h5 class="card-title"><font color="#113946" size="5" face="AR JULIAN">COCO OIL</h5></font>
-          <p class="card-text">Unleash the power of pure coconut goodness with our Coconut Oil.</p>
+          <p class="card-text">Unleash the power of pure coconut goodness with our Coconut Oil. It has a wide range of uses.</p>
           <p class="price">$10.99</p>
           <button class="btn btn-outline-success my-2 my-sm-0" type="submit" style="background-color:#D2E3C8">Add to cart</button>
         </div>
@@ -145,5 +182,4 @@
    
     </table>
 </center>
-<hr>
   </body>

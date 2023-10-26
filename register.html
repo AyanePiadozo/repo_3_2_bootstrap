@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration</title>
+<style>
+  * {
+    box-sizing: border-box;
+    }
+  
+    *:focus {
+        outline: none;
+    }
+  
+    body {
+    font-family: Arial;
+    padding: 5%;
+    background-color: rgba(0, 0, 0, 0.5);
+  
+    }
+    .registerbtn {
+    margin: 20px auto;
+    width: 700px;
+    }
+    .registration-screen {
+    background-color: #FFF;
+    padding: 20px;
+    border-radius: 10px
+    
+    }
+  
+    .app-title {
+    text-align: center;
+    color: #000000;
+    }
+  
+    .registration-form {
+    text-align: left;
+    }
+    .container {
+    margin-bottom: 10px;
+    
+  
+  
+    }
+    .border{
+        height: 3px;
+        background:#113946;
+        margin: 20px 0;
+        box-shadow: 0px 0px 4px 2px #FFF2D8;
+    }
+  
+    .Headings{
+        font-family: Arial;
+        font-size: 2rem;
+        font-weight: Bold;
+        text-align: center;
+        color: rgba(0, 0, 0, 0.9);;
+        margin: 50px 0px;
+        transform: translate(-0%, -70%);
+    }
+    input[type=TextStyle1], input[type=TextStyle2] {
+      width: 100%;
+      padding: 15px;
+      margin: 5px 0 22px 0;
+      display: inline-block;
+      border: none;
+      background: #f1f1f1;
+    }
+  
+    .TextStyle1 {
+        font-family:Serif;
+        font-weight: Bold;
+        margin-left: 5px;
+        font-size: 15px;
+        color: rgba(60, 60, 60, 0.9);
+        text-align: left;
+    }
+  
+    .TextStyle2 {
+        font-family: Serif;
+        font-style: italic;
+        font-weight: bold;
+        margin-left: 5px;
+        font-size: 15px;
+        color: rgba(60, 60, 60, 0.9);
+        text-align: center;
+    }
+  
+    input {
+    text-align: center;
+    background-color: #ECF0F1;
+    border: 2px solid transparent;
+    border-radius: 3px;
+    font-size: 16px;
+    font-weight: 200;
+    width: 200px;
+    transition: border .5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+  
+    .center-textbox {
+      padding: 10px;
+    }
+  
+    input:focus {
+    border: 2px solid #BCA37F;
+    box-shadow: none;
+    }
+  
+  
+  
+    .registerbtn {
+      background-color: #113946;
+      color: white;
+      padding: 16px 20px;
+      margin: 8px 0;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+      opacity: 0.9;
+    }
+  
+    .registerbtn:hover {
+      opacity: 1;
+      background-color: rgba(80, 80, 80, 0.9);;
+  
+    }
+  
+    .login-link {
+      font-size: 12px;
+      color: #444;
+      display: block;
+        margin-top: 12px;
+    }
+  
+</style>
+  
+  
+</head>
+<body>
+  <div class="registration">
+  <div class="registration-screen">
+    <div class="app-title">
+      <h1 class="Headings">Register</h1>
+    </div>
+
+    <div class="registration-form">
+      <div class="container">
+        <p>Please fill in this form to create an account.</p>
+        <hr>
+
+        <label for="email"><b>Email</b></label>
+        <input type="TextStyle1" placeholder="Enter Email" name="email" id="email" required>
+      <div class="control-group">
+        <label for="psw"><b>Password</b></label>
+        <input type="TextStyle1" placeholder="Enter Password" name="psw" id="psw" required>
+      <div class="control-group">
+      <label for="psw-repeat"><b>Repeat Password</b></label>
+      <input type="TextStyle1" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" required>
+    </div>
+         <div>
+      <button type="submit" class="registerbtn" input type="Submit" onclick="alert('You are now Registered!')"  value="Submit">Register</button>
+    </div>
+
+       <div class="container signin">
+      <p class="TextStyle2">Already have an account? <a href="shop.html">Login</a>.</p>
+    </div>
+
+       </div>
+      </div>
+     </div>
+     </div>
+  </div>
+  </body>
+   </html>
