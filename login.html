@@ -1,63 +1,152 @@
-<!-- <html> 
-<head>
-    <style>
-    
-        .modal-overlay {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.5);
-            z-index: 1;
-        }
 
-       
-        .modal-content {
-            position: absolute;
-            top: 0%;
-            left: 0%;
-            transform: translate(-50%, -50%);
-            background-color: #fff;
-            padding: 20px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-    </style>
-</head>
+<style>
+	* {
+  box-sizing: border-box;
+  }
+
+  *:focus {
+      outline: none;
+  }
+
+  body {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(34, 122, 103, 0.5);
+	z-index: 1;
+  }
+  .login {
+  margin: 20px auto;
+  width: 700px;
+  }
+  .login-screen {
+  background-color: #FFF;
+  padding: 15px;
+  border-radius: 10px
+  }
+
+  .app-title {
+  text-align: center;
+  color: #000000;
+  }
+
+  .login-form {
+  text-align: left;
+  }
+  .control-group {
+  margin-bottom: 10px;
+  }
+  
+
+  .Headings{
+      font-family: Arial;
+      font-size: 2rem;
+      font-weight: Bold;
+      text-align: center;
+      color: rgba(0, 0, 0, 0.9);;
+      margin: 50px 0px;
+      transform: translate(-0%, -70%);
+  }
+
+  .TextStyle1 {
+      font-family:Serif;
+      font-weight: Bold;
+      margin-left: 5px;
+      font-size: 15px;
+      color: rgba(60, 60, 60, 0.9);
+      text-align: left;
+  }
+
+  .TextStyle2 {
+      font-family: Serif;
+      font-style: italic;
+      font-weight: bold;
+      margin-left: 5px;
+      font-size: 15px;
+      color: rgba(60, 60, 60, 0.9);
+      text-align: center;
+  }
+
+  input {
+  text-align: center;
+  background-color: #ECF0F1;
+  border: 2px solid transparent;
+  border-radius: 3px;
+  font-size: 16px;
+  font-weight: 200;
+  width: 200px;
+  transition: border .5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  }
+
+  .center-textbox {
+    padding: 10px;
+  }
+
+  input:focus {
+  border: 2px solid #BCA37F;
+  box-shadow: none;
+  }
+
+  .btn {
+    font-family: Lucida Sans;
+    border: 2px solid transparent;
+    background: #435334;
+    color: #ffffff;
+    font-size: 18px;
+    line-height: 25px;
+    padding: 10px 0;
+    text-decoration: none;
+    text-shadow: none;
+    border-radius: 3px;
+    box-shadow: none;
+    transition: 0.25s;
+    display: block;
+    width: 250px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .btn:hover {
+    background-color: rgba(80, 80, 80, 0.9);;
+  }
+
+  .login-link {
+    font-size: 12px;
+    color: #444;
+    display: block;
+      margin-top: 12px;
+  }
+
+</style>
 <body>
+<body>
+	<div class="login">
+		<div class="login-screen">
+			<div class="app-title">
+				<h1 class="Headings">Login</h1>
+			</div>
+			
+			<div class="login-form">
+				<div class="control-group">
+                    <p class="TextStyle1" >Username:</p>
+				    <input type="text" class="login-field" value="" placeholder="" id="login-name">
+				    <label class="login-field-icon fui-user" for="login-name"></label>
+				</div>
 
+				<div class="control-group">
+                    <p class="TextStyle1">Password:</p>
+				    <input type="password" class="login-field" value="" placeholder="" id="login-pass">
+				    <label class="login-field-icon fui-lock" for="login-pass"></label>
+				</div>
 
-<button onclick="openLoginModal()">Login</button>
+                <a class="login-link TextStyle2" href="register.html">Don't have an account? Click here to Register.</a><br>
+				<a class="btn btn-primary btn-large btn-block" href="shop.html">Login</a>
+			</div>
 
+			</div>
+			</div>
+  </body>
 
-<div id="loginModal" class="modal-overlay">
-    <div class="modal-content">
-        <h2>Login</h2>
-        <form>
-            <label for="username">Username:</label>
-            <input type="text" id="username" name="username" required><br><br>
-
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password" required><br><br>
-
-            <input type="submit" value="Login">
-        </form>
-        <button onclick="closeLoginModal()">Close</button>
-    </div>
-</div>
-
-<script>
-   
-    function openLoginModal() {
-        document.getElementById('loginModal').style.display = 'block';
-    }
-
-    function closeLoginModal() {
-        document.getElementById('loginModal').style.display = 'none';
-    }
-</script>
-
-</body>
-</html>
