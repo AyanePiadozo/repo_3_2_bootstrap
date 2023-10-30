@@ -1,151 +1,184 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
- 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">
-   <title>Shop</title>
-   
-   
-  </head>
-  
-  <body style="background-color: #F9F5F6;">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#"><img src="logo.png" width="80px" height="80px"></a></a></font>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-              <li class="nav-item active">
-                <a class="nav-link" href="#"><b>Home</b><span class="sr-only"></span></a>
-              </li>
-              <li class="nav-item active">
-                <a class="nav-link" href="#"><b>Products</b><span class="sr-only">(current)</span></a>
-              </li>
-              <li class="nav-item active">
-                <a class="nav-link" href="#"><b>Categories</b><span class="sr-only"></span></a>
-              </li>
-            </ul></div>
-        <nav class="navbar navbar-light bg-light" align-right>
-            <font class="form-inline">
-              <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success my-2 my-sm-0" type="submit" style="background-color:#F4EEEE">Search</button></font>
-               <button class="btn btn-outline-success my-2 my-sm-0" type="submit"  style="background-color:#E4E4D0">Cart</button></font>
+<head>
+  <meta charset="utf-8">
+  <title>Shop</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<body>
+  <style>
 
+      body {
+          background-image: url('https://images.pexels.com/photos/322483/pexels-photo-322483.jpeg?cs=srgb&dl=pexels-oleksandr-p-322483.jpg&fm=jpg');
+          background-size: cover;
+          background-attachment: fixed;
+        }
+          .card {
+            height: 100%;
+          }
+          .card-img-top {
+            object-fit: cover;
+            height: 200px;
+          }
+          .card-body {
+            height: auto; 
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+          }
+          .card-body .btn-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+          }
+          .card-title, .card-text {
+            height: auto; 
+          }
+          .card-text {
+            font-size: 14px;
+          }
 
-              <style>
-    
-                .modal-overlay {
-                    display: none;
-                    position: fixed;
-                    top: 0;
-                    left: 0;
-                    width: 100%;
-                    height: 100%;
-                    background-color: rgba(34, 122, 103, 0.5);
-                    z-index: 1;
+          .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(34, 122, 103, 0.5);
+            z-index: 1;
                     
                 }
         
-               
-                .modal-content {
-                    position: absolute;
-                    top: 50%;
-                    left: 35%;
-                    width: 80%;
-                    transform: translate(-30%, -50%);
-                    background-color:#F4EEEE;
-                    padding: 20px;
-                    border: 1px solid #268b77;
-                    border-radius: 10px;
+          .modal-content {
+             position: fixed;
+             top: 50%;
+             left: 35%;
+             width: 50%;
+             transform: translate(-20%, -50%);
+             background-color: #F5E8B7;
+             padding: 20px;
+              border: 1px solid #268b77;
+              border-radius: 10px;
                 }
-            </style>
-            <center>
-        
-        <button onclick="openLoginModal()" button class="btn btn-outline-success my-2 my-sm-0" type="submit" style="background-color:#F4EEEE">Login</button>
-        <div id="loginModal" class="modal-overlay">
-            <div class="modal-content" style="display: flex; align-items: center; justify-content: center; height: 60vh;">
-                <h2><b>Login</b></h2>
-                <br>
-                <form>
-                    <label for="username">Username:</label>
-                    <input type="text" id="username" name="username" required><br><br>
-        
-                    <label for="password">Password:</label>
-                    <input type="password" id="password" name="password" required><br><br>
+    </style>
+  
 
-                    <a class="login-link TextStyle2" href="register.html">Don't have an account? Sign up here.</a><br>
-                    <input type="submit" style="background-color:#98edd7"  value="Login">
-                    <button onclick="closeLoginModal()"  style="background-color:#98edd7" >Close</button>
-                </form><br>
-            </div>
-        </div>
-        
-        <script>
-        
-            function openLoginModal() {
-                document.getElementById('loginModal').style.display = 'block';
-            }
-        
-            function closeLoginModal() {
-                document.getElementById('loginModal').style.display = 'none';
-            }
-        </script>
-        </center>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+      <a class="navbar-brand"><b>COCO SHOP</b></a>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="#"><b>Home</b></a></li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#"><b>Products</b></a></li>
+        </ul>
+
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit"  style="background-color:#F5E8B7">Search</button>
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit"  style="background-color:#F5E8B7">Cart</button>
+          <button onclick="openLoginModal()" button class="btn btn-outline-success my-2 my-sm-0" type="submit" style="background-color:#F4EEEE">Login</button>
+          
+          <div id="loginModal" class="modal-overlay">
+              <div class="modal-content" style="display: flex; align-items: center; justify-content: center; height: 70vh;">
+                  <h2><b>Login</b></h2>
+                  <br>
+                  <form>
+                      <label for="username">Username:</label>
+                      <input type="text" id="username" name="username" required><br>
+                      <label for="password">Password:</label>
+                      <input type="password" id="password" name="password" required><br>
+                      <font class="form-inline">
+                      <input type="checkbox" class="form-check-input" id="rememberMe">
+                      <label class="form-check-label" for="rememberMe">Remember me</label></font>
+                      <a class="login-link TextStyle2" href="register.html">Don't have an account? Sign up here.</a><br>
+                      <font class="form-inline">
+                      <input type="submit" style="background-color:#6A9C89"  value="Login">
+                      <button onclick="closeLoginModal()"  style="background-color:#6A9C89" >Close</button></font>
+                  </form><br>
+              </div>
+          </div>
+          
+          <script>
+          
+              function openLoginModal() {
+                  document.getElementById('loginModal').style.display = 'block';
+              }
+          
+              function closeLoginModal() {
+                  document.getElementById('loginModal').style.display = 'none';
+              }
+          </script>
+          </center>
+          </form>
+            </nav>
+       </nav>
         </form>
-          </nav>
-     </nav>
-     
-     <center>
-    <table bgcolor="beige">
-        <th>
-     <div class="card" style="width: 18rem;">
-        <img class="card-img-top" src="1.png" alt="Card image cap">
-        <div class="card-body">
-          <h5 class="card-title"><font color="#113946" size="5" face="AR JULIAN">COCO OIL</h5></font>
-          <p class="card-text">Unleash the power of pure coconut goodness with our Coconut Oil. It has a wide range of uses.</p>
-          <p class="price">$10.99</p>
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit" style="background-color:#D2E3C8">Add to cart</button>
+      </div>
+    </div>
+  </nav>
+  <hr>
+
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3">
+            <div class="card">
+              <img class="card-img-top" src="https://5.imimg.com/data5/SELLER/Default/2023/1/VK/EB/CI/49847562/coconut-oil-500x500.jpg" alt="Card image cap">
+              <div class="card-body">
+                <h5 class="card-title" style="color: #435334; font-size: 24px;">COCO OIL</h5>
+                <p class="card-text">Unleash the power of pure coconut goodness with our Coconut Oil. It has a wide range of uses.</p>
+                <div class="btn-container">
+                  <p class="price">$10.99</p>
+                  <button class="btn btn-primary" style="background-color: #CD5C08">Add to cart</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card">
+              <img class="card-img-top" src="https://my-massage.gr/wp-content/uploads/2022/04/coconut-candle-mango_1.jpeg" alt="Card image cap">
+              <div class="card-body">
+                <h5 class="card-title" style="color: #435334; font-size: 24px;">COCO CANDLES</h5>
+                <p class="card-text">These candles are carefully crafted to infuse your home with the rich aroma of coconuts.</p>
+                <div class="btn-container">
+                  <p class="price">$8.00</p>
+                  <button class="btn btn-primary" style="background-color: #CD5C08">Add to cart</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card">
+              <img class="card-img-top" src="https://i.pinimg.com/736x/10/b2/64/10b264b6518c19ac74daf9eedf8ac4f8.jpg" alt="Card image cap">
+              <div class="card-body">
+                <h5 class="card-title" style="color: #435334; font-size: 24px;">COCO SERUM</h5>
+                <p class="card-text">This is a tropical elixir that encapsulates the beauty secrets of the coconut palm.</p>
+                <div class="btn-container">
+                  <p class="price">$7.00</p>
+                  <button class="btn btn-primary" style="background-color: #CD5C08">Add to cart</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card">
+              <img class="card-img-top" src="https://makanastudios.com/cdn/shop/products/image_c3176bfb-a6b8-469a-842c-e8c5d3c348d4_600x600.jpg?v=1612203266" alt="Card image cap">
+              <div class="card-body">
+                <h5 class="card-title" style="color: #435334; font-size: 24px;">COCO FRAGRANCE</h5>
+                <p class="card-text">A delightful and popular scent that captures the essence of tropical paradise.</p>
+                <div class="btn-container">
+                  <p class="price">$8.80</p>
+                  <button class="btn btn-primary" style="background-color: #CD5C08">Add to cart</button>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </th>
-    <th>
-        <div class="card" style="width: 18rem;">
-           <img class="card-img-top" src="4.png" alt="Card image cap">
-           <div class="card-body">
-             <h5 class="card-title"><font color="#113946" size="5" face="AR JULIAN">COCO CANDLES </h5></font>
-             <p class="card-text"> These candles are carefully crafted to infuse your home with the rich aroma of coconuts.</p>
-             <p class="price">$8.00</p>
-             <button class="btn btn-outline-success my-2 my-sm-0" type="submit" style="background-color:#D2E3C8">Add to cart</button>
-           </div>
-         </div>
-       </th>
-       <th>
-        <div class="card" style="width: 18rem;">
-           <img class="card-img-top" src="5.png" alt="Card image cap">
-           <div class="card-body">
-             <h5 class="card-title"><font color="#113946" size="5" face="AR JULIAN">COCO FRAGRANCE</h5></font>
-             <p class="card-text">A delightful and popular scent that captures the essence of tropical paradise.</p>
-             <p class="price">$7.00</p>
-             <button class="btn btn-outline-success my-2 my-sm-0" type="submit" style="background-color:#D2E3C8">Add to cart</button>
-           </div>
-         </div>
-       </th>
-       <th>
-        <div class="card" style="width: 18rem;">
-           <img class="card-img-top" src="6.png" alt="Card image cap">
-           <div class="card-body">
-             <h5 class="card-title"><font color="#113946" size="5" face="AR JULIAN">COCO SERUM</h5></font>
-             <p class="card-text">This is a tropical elixir that encapsulates the beauty secrets of the coconut palm.</p>
-             <p class="price">$8.80</p>
-             <button class="btn btn-outline-success my-2 my-sm-0" type="submit" style="background-color:#D2E3C8">Add to cart</button>
-           </div>
-         </div>
-       </th>
-   
-    </table>
-</center>
-<hr>
-  </body>
+      
+</body>
+</html>
