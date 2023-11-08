@@ -93,11 +93,12 @@
             <a class="nav-link active" aria-current="page" href="#" style="color:#fad9c0"><b>Products</b></a></li>
         </ul>
 
-        <form class="d-flex">
+        <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+        <div class="btn-group mr-2" role="group" aria-label="First group">
           <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit"  style="background-color:#F5E8B7">Search</button>
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit"  style="background-color:#F5E8B7">Cart</button>
-          <button onclick="openLoginModal()" button class="btn btn-outline-success my-2 my-sm-0" type="submit" style="background-color:#F4EEEE">Login</button>
+          <button type="button" class="btn btn-warning">Search</button>
+          <button type="button" class="btn btn-warning">Cart</button>
+          <button onclick="openLoginModal()" button class="btn btn-light" type="submit" style="background-color:#F4EEEE">Login</button>
           
           <div id="loginModal" class="modal-overlay">
               <div class="modal-content" style="display: flex; align-items: center; justify-content: center; height: 70vh;">
@@ -105,16 +106,16 @@
                   <br>
                   <form>
                       <label for="username">Username:</label>
-                      <input type="text" id="username" name="username" required><br>
+                      <input type="text" id="username" name="username" required><br><br>
                       <label for="password">Password:</label>
-                      <input type="password" id="password" name="password" required><br>
+                      <input type="password" id="password" name="password" required><br><br>
                       <font class="form-inline">
                       <input type="checkbox" class="form-check-input" id="rememberMe">
-                      <label class="form-check-label" for="rememberMe">Remember me</label></font>
-                      <a class="register-link TextStyle2" href="C:\Users\ADMIN\Documents\GitHub\repo_3_2_bootstrap\register.html">Don't have an account? Register here.</a><br>
+                      <label class="form-check-label" for="rememberMe">Remember me</label></font><br>
+                      <a class="register-link TextStyle2" href="C:\Users\ADMIN\Documents\GitHub\repo_3_2_bootstrap\register.html">Don't have an account? Register here.</a><br><br>
                       <font class="form-inline">
                       <input type="submit" style="background-color:#F4BF96"  value="Login">
-                      <button onclick="closeLoginModal()"  style="background-color:#F4BF96" >Close</button></font>
+                      <button onclick="closeLoginModal()"  style="background-color:#F4BF96">Close</button></font>
                   </form><br>
               </div>
           </div>
@@ -149,7 +150,7 @@
                 <p class="card-text">Unleash the power of pure coconut goodness with our Coconut Oil. It has a wide range of uses.</p>
                 <div class="btn-container">
                   <p class="price">$10.99</p>
-                  <button class="btn btn-primary" style="background-color: #CD5C08">Add to cart</button>
+                  <button class="btn btn-warning">Add to cart</button>
                 </div>
               </div>
             </div>
@@ -162,7 +163,7 @@
                 <p class="card-text">These candles are carefully crafted to infuse your home with the rich aroma of coconuts.</p>
                 <div class="btn-container">
                   <p class="price">$8.00</p>
-                  <button class="btn btn-primary" style="background-color: #CD5C08">Add to cart</button>
+                  <button class="btn btn-warning">Add to cart</button>
                 </div>
               </div>
             </div>
@@ -175,7 +176,7 @@
                 <p class="card-text">This is a tropical elixir that encapsulates the beauty secrets of the coconut palm.</p>
                 <div class="btn-container">
                   <p class="price">$7.00</p>
-                  <button class="btn btn-primary" style="background-color: #CD5C08">Add to cart</button>
+                  <button class="btn btn-warning">Add to cart</button>
                 </div>
               </div>
             </div>
@@ -188,7 +189,7 @@
                 <p class="card-text">A delightful and popular scent that captures the essence of tropical paradise.</p>
                 <div class="btn-container">
                   <p class="price">$8.80</p>
-                  <button class="btn btn-primary" style="background-color: #CD5C08">Add to cart</button>
+                  <button class="btn btn-warning">Add to cart</button>
                 </div>
                 
               </div>
@@ -198,7 +199,7 @@
       </div>
       <br><br>
       <center>
-        <button id="openModalBtn" style="background-color:#26e89e"><b>Add a Product</b></button>
+        <button id="openModalBtn" class="btn btn-dark btn-lg btn-block"><b>Add a Product</b></button>
       </center>
 
         <div id="productModal" class="modal">
