@@ -84,7 +84,7 @@
 
   <nav class="navbar navbar-expand-lg navbar-secondary bg-secondary">
     <div class="container">
-      <a class="navbar-brand" style="color:#fad9c0"><b>COCO SHOP</b></a>
+      <a class="navbar-brand" style="color:#ffffff"><b>COCO SHOP</b></a>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
@@ -114,8 +114,8 @@
                       <label class="form-check-label" for="rememberMe">Remember me</label></font><br>
                       <a class="register-link TextStyle2" href="C:\Users\ADMIN\Documents\GitHub\repo_3_2_bootstrap\register.html">Don't have an account? Register here.</a><br><br>
                       <font class="form-inline">
-                      <input type="submit" style="background-color:#F4BF96"  value="Login">
-                      <button onclick="closeLoginModal()"  style="background-color:#F4BF96">Close</button></font>
+                      <input type="submit" class="btn btn-dark" value="Login">
+                      <button onclick="closeLoginModal()"  class="btn btn-warning">Close</button></font>
                   </form><br>
               </div>
           </div>
@@ -198,9 +198,13 @@
         </div>
       </div>
       <br><br>
-      <center>
-        <button id="openModalBtn" class="btn btn-dark btn-lg btn-block"><b>Add a Product</b></button>
-      </center>
+     
+        <div class="container">
+          <div class="col align-self-start">
+        <button id="openModalBtn" class="btn btn-light btn-lg btn-block"><b>Add a Product</b></button>
+        </div>
+     
+      </div>
 
         <div id="productModal" class="modal">
             <div class="modal-content">
@@ -232,7 +236,7 @@
 
               </div>
               <div class="modal-footer">
-                <button id="closeModalBtn" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                <button id="closeModalBtn" class="btn btn-warning" data-bs-dismiss="modal">Close</button>
                 <button type="button" class="btn btn-success">Add Product</button>
               </div>
             </div>
